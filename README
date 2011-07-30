@@ -1,0 +1,37 @@
+h1. popcount-java-test について
+
+Java における popcount の各種実装
+ * ビット演算
+ * テーブル参照 (8 ビット単位、16 ビット単位)
+の性能比較を行うためのプログラムです。
+
+h1. popcount の実装とメソッドの対応について
+
+ * Popcount.popcountB() ... ビット演算による popcount 演算。
+ * Popcount.popcountT8() ... 8 ビット単位でのテーブル参照による popcount 演算。
+ * Popcount.popcountT16() ... 16 ビット単位でのテーブル参照による popcount 演算。
+
+h1. 実行結果
+
+下記スペックの PC にて実行した結果です。
+
+ * CPU ... Core i3 540
+ * メモリ ... 4GB
+ * OS ... Windows 7 (64 bit)
+
+<pre>
+-----
+popcountB を実行します。
+popcountB の結果は 20040 ミリ秒でした。
+(49900 回/秒)
+
+-----
+popcountT8 を実行します。
+popcountT8 の結果は 16657 ミリ秒でした。
+(60034 回/秒)
+
+-----
+popcountT16 を実行します。
+popcountT16 の結果は 8022 ミリ秒でした。
+(124657 回/秒)
+</pre>
